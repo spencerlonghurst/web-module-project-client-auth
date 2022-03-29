@@ -77,6 +77,11 @@ Each friend object has the format:
 
 * [ ] Redirect the user to your login route if there is not a token in local storage.
 
+
+
+
+
+
 ### Task 3: Stretch goals
 
 - [ ] Add in a modularized way to access protected endpoints using axiosWithAuth.
