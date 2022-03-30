@@ -11,6 +11,7 @@ import LoginForm from "./components/LoginForm";
 import Friends from "./components/Friends";
 import AddFriend from "./components/AddFriend";
 import Logout from "./components/Logout";
+import PrivateRoute from "./components/PrivateRoute";
 
 const loginUrl = "http://localhost:3000/login";
 const friendsUrl = "http://localhost:3000/friends";
@@ -45,15 +46,9 @@ function App() {
         <Route path="/login">
           <LoginForm />
         </Route>
-        <Route path="/friends">
-          <Friends />
-        </Route>
-        <Route path="/friends/add">
-          <AddFriend />
-        </Route>
-        <Route path="/logout">
-          <Logout />
-        </Route>
+        <PrivateRoute path="/friends" component={Friends} />
+        <PrivateRoute path="/friends/add" component={AddFriend} />
+        <PrivateRoute path="/logout" component={Logout}/>
       </div>
     </Router>
   );
