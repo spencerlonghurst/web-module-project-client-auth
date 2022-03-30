@@ -10,6 +10,7 @@ import {
 import LoginForm from "./components/LoginForm";
 import Friends from "./components/Friends";
 import AddFriend from "./components/AddFriend";
+import Logout from "./components/Logout";
 
 const loginUrl = "http://localhost:3000/login";
 const friendsUrl = "http://localhost:3000/friends";
@@ -17,10 +18,6 @@ const addFriendUrl = "http://localhost:3000/friends/add";
 const login = "http://localhost:3000/logout";
 
 
-
-const LogOut = () => {
-  return <h2>LOGOUT</h2>;
-};
 
 function App() {
   // const navigate = useNavigate()
@@ -55,7 +52,7 @@ function App() {
           <AddFriend />
         </Route>
         <Route path="/logout">
-          <LogOut />
+          <Logout />
         </Route>
       </div>
     </Router>
